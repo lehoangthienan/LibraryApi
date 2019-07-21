@@ -1,4 +1,3 @@
-
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
@@ -22,14 +21,5 @@ _testmain.go
 
 *.exe
 *.test
-*.prof
 
-# top level binary
-/server
-/bin
-
-# credentials
-**/credentials
-**/.env
-**/env.json
-**/.env_migrator.yaml
+*.bench

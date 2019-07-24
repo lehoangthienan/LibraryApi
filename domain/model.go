@@ -9,8 +9,9 @@ import (
 
 // Model base model for domain type
 type Model struct {
-	ID        UUID       `sql:",type:uuid" json:"id"`
-	CreatedAt time.Time  `sql:"default:now()" json:"created_at"`
+	ID        UUID      `sql:",type:uuid" json:"id"`
+	CreatedAt time.Time `sql:"default:now()" json:"created_at"`
+	UpdatedAt time.Time
 	DeletedAt *time.Time `json:"deleted_at,omitempty"`
 }
 

@@ -3,6 +3,7 @@ package user
 import (
 	"context"
 
+	"github.com/go-kit/kit/log"
 	"github.com/jinzhu/gorm"
 
 	"github.com/lehoangthienan/LibraryApi/domain"
@@ -10,13 +11,15 @@ import (
 
 // pgService implmenter for User serivce in postgres
 type pgService struct {
-	db *gorm.DB
+	db     *gorm.DB
+	logger log.Logger
 }
 
 // NewPGService create new PGService
-func NewPGService(db *gorm.DB) Service {
+func NewPGService(db *gorm.DB, logger log.Logger) Service {
 	return &pgService{
-		db: db,
+		db:     db,
+		logger: logger,
 	}
 }
 
